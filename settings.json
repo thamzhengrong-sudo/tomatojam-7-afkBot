@@ -90,17 +90,3 @@
     "respond": true
   }
 }
-
-setInterval(() => {
-  if (!bot.entity) return
-
-  const controlStates = ['forward', 'back', 'left', 'right']
-  const state = controlStates[Math.floor(Math.random() * controlStates.length)]
-
-  bot.setControlState(state, true)
-
-  setTimeout(() => {
-    bot.setControlState(state, false)
-  }, 1000)
-
-}, 30000)
